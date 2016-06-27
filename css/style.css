@@ -1,0 +1,30 @@
+@charset "UTF-8";
+body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: url(../img/bg.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    /* pour anciens Chrome et Safari */
+    background-size: cover;
+    /* version standardisée */
+}
+
+form {
+    border-top: 7px solid #6AB46A;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 5%;
+    display: block;
+    background-color: #D4D4D4;
+    opacity: 0.8;
+    box-shadow: 5px 5px 10px black; 
+
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+}
+
+textarea {
+    resize: none;
+}

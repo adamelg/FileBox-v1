@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+/*
+ * Interface based on File Upload Plugin from :
+ * jQuery File Upload Plugin Basic Demo
+ * https://github.com/blueimp/jQuery-File-Upload
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ * 
+ * And released by Adam EL GHAZZAL
+ * Copyright 2016, AEG
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */ 
+--> 
+<html lang="en"> 
+
+<head>
+    <!-- Force latest IE rendering engine or ChromeFrame if installed -->
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <meta charset="utf-8">
+    <title>FileBox v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Generic page styles -->
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    <link rel="stylesheet" href="css/jquery.fileupload.css">
+    
+    <!-- Google font -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>FileBox</h1>
+            <p>v1.0<p>
+
+
+            <form method="post" onsubmit="filesubmiter.submit(); return false;" name="myForm" enctype="multipart/form-data" id="toggle">
+                <!-- The fileinput-button span is used to style the file input field as button -->
+
+
+                <span class="btn btn-default fileinput-button">
+        <i class="glyphicon glyphicon-plus"></i>
+        <span>Selectionnez un fichier...</span>
+                <!-- The file input field used as target for the file upload widget -->
+                <input id="fileupload" type="file" name="avatar">
+                </span>
+                <br>
+                <br>
+                <!-- The global progress bar -->
+                <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success"></div>
+                </div>
+
+                <h5>Fichier envoyé :</h4>
+                <!-- The container for the uploaded files -->
+                <div id="files" class="files"></div>
+
+                <br>
+
+                <h5>Votre e-mail :</h4>
+                <input type="mail" class="form-control" name="mail_expediteur" placeholder="Entrez votre mail">
+
+
+                <h5>E-mail du destinataire :</h4>
+                <input type="mail" class="form-control" name="mail_destinataire" placeholder="Entrez le mail du destinataire">
+
+                <br>
+
+                <h5>Message :</h4>
+                <textarea name="message" class="form-control" rows="3"></textarea>
+                <br>
+                <button type="submit" class="btn btn-success">Envoyer</button>
+
+                <br>
+                <br>
+            </form>
+
+
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+    <script src="js/vendor/jquery.ui.widget.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script src="js/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="js/jquery.fileupload.js"></script>
+    <!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="js/main.js"></script>
+    
+    
+</body>
+</html>
